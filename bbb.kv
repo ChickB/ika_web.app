@@ -1,0 +1,32 @@
+ImageWidget:
+
+<ImageWidget>:
+    canvas.before:
+        Color:
+            rgba: 0.6, 0.6, 0.6, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+
+
+        BoxLayout:
+            size_hint_y: 1
+            padding: 20,30,20,10
+            Button:
+                background_color:(0,0,1,1)
+                id: button1
+                text: root.juu
+                font_size: 20
+                on_press: root.buttonStarted()
+        BoxLayout:
+            padding: 20,30,20,10
+            Button:
+                background_color:(255,255,0,1)
+                id: button2
+                text: root.source
+                font_size: 20
+                color:(0,0,0,1)
+                on_press: root.buttonRandom()
